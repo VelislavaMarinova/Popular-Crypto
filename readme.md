@@ -1,7 +1,7 @@
 # Getting Started with Popular Crypto
 ---
 ---
-![Popular Crypto](assets/Intro.png)
+![Popular Crypto](./public/Images/Intro.png)
 Popular Crypto is a page with top volume cryptocurrencies.
 ## Install app
 Install project dependencies:
