@@ -1,28 +1,24 @@
 import { useState, useEffect } from "react";
+import utils from "../utils/utils";
+
+const {url,options}=utils();
 
 const useGetData = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
 
 
     useEffect(() => {
         setLoading(true)
         try {
-            fetch(`https://min-api.cryptocompare.com/data/top/totaltoptiervolfull?limit=10&tsym=USD`, {
-                method: "GET",
-                headers:
-                    { 'authorization': 'Apikey ae9116f26eb9479ef4c93a832ff70ff659cad88507792515d965ca35fb602bc1' }
-            })
+            fetch(url,options)
                 .then(res => res.json())
                 .then(result => {
                     setData(result.Data);
                     setLoading(false);
-                    // console.log(result.Data[0].CoinInfo.Name);
                 });
 
         } catch (error) {
-
             throw new Error(error);
         };
     }, [])
