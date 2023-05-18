@@ -6,7 +6,9 @@ const utils = () => {
         method: "GET",
         headers: { 'authorization': 'Apikey ae9116f26eb9479ef4c93a832ff70ff659cad88507792515d965ca35fb602bc1' }
     };
-    return {url,options}
+    const urlLogoFirstPart = 'https://www.cryptocompare.com'
+
+    return { url, options, urlLogoFirstPart }
 };
 
 export default utils;
