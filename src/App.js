@@ -1,7 +1,17 @@
+import useGetData from "./components/hooks/useGetData.js";
+
 function App() {
+  const { data,loading} = useGetData();
+
+  
+  console.log(data);
+  console.log(data[0].RAW.USD.TOSYMBOL);
+  console.log(loading);
+
+
   return (
     <div>
-      <h1>Hello from React!</h1>
+      {data.map(x=><h1>{x.CoinInfo.Name} {x.RAW.USD.PRICE}{x.RAW.USD.TOSYMBOL}</h1>)}
     </div>
   );
 }
