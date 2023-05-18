@@ -1,8 +1,8 @@
+import styles from './HomePage.module.css';
 import Loading from "../loading/Loading.js";
 import useGetData from "../hooks/useGetData.js";
-import styles from './HomePage.module.css'
 import CryptoList from "../cryptoList/CryptoList.js";
-import NoDataFound from "../notFound/NoDataFound.js";
+import NoDataFound from "../noDataFound/NoDataFound.js";
 
 const HomePage = () => {
     const { data, loading } = useGetData();
