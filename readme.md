@@ -5,7 +5,9 @@
 Popular Crypto is a page with top volume cryptocurrencies.
 ## Install app
 Install project dependencies:
+```
 npm install
+```
 
 ## Start app
 Start the app:
