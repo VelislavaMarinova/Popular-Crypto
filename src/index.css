@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
+:root{
+  --color-dark-grey:#2a2929 ;
+  --color-light-grey: #4b4b4b ;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +14,9 @@ html {
 }
 
 body {
+  color: var(--color-dark-grey);
   margin: 0;
+  padding: 24px;
   background-color: white;
 }
 
