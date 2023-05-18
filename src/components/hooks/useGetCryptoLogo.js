@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 const useGetCryptoLogo = (crypto) => {
     console.log('crypto',crypto);
     const [logo, setLogo] = useState()
-    const [loadingLogo, setLoadingLogo] = useState(true)
+    // const [loadingLogo, setLoadingLogo] = useState(true)
 
 
     useEffect(() => {
-        setLoadingLogo(true)
+        // setLoadingLogo(true)
         try {
             fetch(`https://data-api.cryptocompare.com/asset/v1/data/by/symbol?asset_symbol=${crypto}`, {
                 method: 'GET',
@@ -16,15 +16,15 @@ const useGetCryptoLogo = (crypto) => {
                 .then(res => res.json())
                 .then(res => {
                     setLogo(res.Data.LOGO_URL)
-                    setLoadingLogo(false)
+                    // setLoadingLogo(false)
                     // console.log(res);
                 })
         } catch (error) {
             throw new Error(error);
         }
-    }, []);
+    }, [crypto]);
 
-    return { logo, loadingLogo };
+    return { logo };//, loadingLogo
 };
 
 export default useGetCryptoLogo;

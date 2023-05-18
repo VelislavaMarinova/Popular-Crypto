@@ -6,11 +6,11 @@ import styles from './HomePage.module.css'
 
 const HomePage = () => {
     const { data, loading } = useGetData();
-    const { loadingLogo } = useGetCryptoLogo(crypto)
+    // const { loadingLogo } = useGetCryptoLogo(crypto)
 
     //   console.log(logo.Data.LOGO_URL);
 
-    if (loading || loadingLogo) {
+    if (loading ) {
         return <Loading />;
     };
     if (!data) {
